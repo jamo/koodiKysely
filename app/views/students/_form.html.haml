@@ -1,10 +1,26 @@
 %h1 Taustatiedot
 
 = form_for @student do |f|
-  %p Opiskelijanumero tai TMC tunnus
-  
+  %p Opiskelijanumero tai TMC tunnus:
   = f.text_field :student_number 
   %br
+  = f.label "Syntymävuosi:"
+  %br
+  = f.text_field :year
+  %br
+  = f.label "Sukupuoli:"
+  %br
+  = f.radio_button :gender, 'M' 
+  = f.label "Mies"
+  %br
+  = f.radio_button :gender, 'N'
+  = f.label "Nainen" 
+  %br
+  = f.radio_button :gender, 'O'
+  = f.label "Muu/en halua kertoa"
+  %br
+  %br
+  
   = f.label "Oletko ohjelmoinut aiemmin?"
   %br
   
