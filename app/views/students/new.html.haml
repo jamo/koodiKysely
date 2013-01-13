@@ -1,0 +1,18 @@
+%h1 New answer
+
+= form_for @student do |f|
+  = f.label :student_number
+  = f.text_field :student_number 
+  %br
+
+  = f.label :programmed_before
+  = f.check_box :programmed_before 
+  %br
+
+  = f.label :details
+  %br
+  = f.text_area :details 
+
+  %br
+  = f.submit 'Next'
+
