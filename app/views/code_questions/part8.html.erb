@@ -1,4 +1,5 @@
-<h2>A</h2>
+<h1>Kysymys 8/8</h1>
+<h3>Koodi A</h3>
 
 <pre class="sh_java">
 int vuosi = 2013;
@@ -18,7 +19,7 @@ if ( vuosi % 400 == 0 ) {
 }
 </pre>    
 
-<h2>B</h2> 
+<h3>Koodi B</h3> 
 <pre  class="sh_java">
 int vuosi = 2013;
 
@@ -44,15 +45,15 @@ System.out.println("Vuosi on karkausvuosi!");
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
-  <%= f.label :too_complex_iffs ,"A" %>
-  <%= f.radio_button :too_complex_iffs, 1 %>
-  <%= f.label :too_complex_iffs ,"B" %>
-  <%= f.radio_button :too_complex_iffs, 2 %>
-  <%= f.label :too_complex_iffs , "EOS" %>
+  <%= f.label :too_complex_iffs ,"Mielestäni parempi on koodi A" %>
+  <%= f.radio_button :too_complex_iffs, 1 %><br>
+  <%= f.label :too_complex_iffs ,"Mielestäni parempi on koodi B" %>
+  <%= f.radio_button :too_complex_iffs, 2 %><br>
+  <%= f.label :too_complex_iffs , "En osaa sanoa" %>
   <%= f.radio_button :too_complex_iffs, 3 %> <br>
-  <%= f.text_area :too_complex_iffs_comment %>
+  <%= f.text_area :too_complex_iffs_comment, :size=>'15x4' %>
   <br>
 
-  <%= f.submit "Seuraava" %>
+  <%= f.submit "Seuraava", :class=>'btn btn-primary' %>
 
  <% end %>

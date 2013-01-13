@@ -1,4 +1,5 @@
-<h2>A</h2>
+<h1>Kysymys 4/8</h1>
+<h3>Koodi A</h3>
 
 <pre class="sh_java">
 int leveys = 2;
@@ -8,7 +9,7 @@ int pintaAla = leveys * korkeus;
 System.out.println(“Pinta-ala: “ + pintaAla);
 </pre>    
 
-<h2>B</h2> 
+<h3>Koodi B</h3> 
 <pre class="sh_java">
 int leveys = 2; // leveys on 2
 int korkeus = 4; // korkeus on 4
@@ -21,15 +22,16 @@ System.out.println(“Pinta-ala: “ + pintaAla); // tulostetaan pinta-ala
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
-  <%= f.label :extra_comments ,"A" %>
-  <%= f.radio_button :extra_comments, 1 %>
-  <%= f.label :extra_comments ,"B" %>
-  <%= f.radio_button :extra_comments, 2 %>
-  <%= f.label :extra_comments , "EOS" %>
+  <%= f.label :extra_comments ,"Mielestäni parempi on koodi A" %>
+  <%= f.radio_button :extra_comments, 1 %><br>
+  <%= f.label :extra_comments ,"Mielestäni parempi on koodi B" %>
+  <%= f.radio_button :extra_comments, 2 %><br>
+  <%= f.label :extra_comments , "En osaa sanoa" %>
   <%= f.radio_button :extra_comments, 3 %> <br>
-  <%= f.text_area :extra_comments_comment %>
+  <br>
+  <%= f.text_area :extra_comments_comment, :size=>'15x4' %>
   <br>
 
-  <%= f.submit "Seuraava" %>
+  <%= f.submit "Seuraava", :class=>'btn btn-primary' %>
 
  <% end %>

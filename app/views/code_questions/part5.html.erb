@@ -1,0 +1,36 @@
+<h1>Kysymys 5/8</h1>
+<h3>Koodi A</h3>
+
+<pre class="sh_java">
+Henkilo pekka = new Henkilo();
+pekka.jumppaa();
+pekka.zzz();
+pekka.panttaa();
+pekka.print();
+</pre>    
+
+<h3>Koodi B</h3> 
+<pre class="sh_java">
+Henkilo pekka = new Henkilo();
+pekka.liiku();
+pekka.nuku();
+pekka.opiskele();
+pekka.kerroOlo();
+</pre>
+
+
+
+<%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  
+  <%= f.label :bad_method_names ,"Mielestäni parempi on koodi A" %>
+  <%= f.radio_button :bad_method_names, 1 %><br>
+  <%= f.label :bad_method_names ,"Mielestäni parempi on koodi B" %>
+  <%= f.radio_button :bad_method_names, 2 %><br>
+  <%= f.label :bad_method_names , "En osaa sanoa" %>
+  <%= f.radio_button :bad_method_names, 3 %> <br>
+  <%= f.text_area :bad_method_names_comment, :size=>'15x4' %>
+  <br>
+
+  <%= f.submit "Seuraava", :class=>'btn btn-primary' %>
+
+ <% end %>

@@ -8,7 +8,7 @@ class StudentsController < ApplicationController
     session[:student_id] = @student.id
     @code_question = @student.code_questions.create
     session[:code_question_id] = @code_question.id
-    redirect_to  code_question_path(:no_indent)
+    redirect_to  code_question_path(:part1)
   end
 
   def index

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130112213559) do
+ActiveRecord::Schema.define(:version => 20130113201215) do
 
   create_table "code_questions", :force => true do |t|
     t.string   "no_indent"
@@ -41,6 +41,10 @@ ActiveRecord::Schema.define(:version => 20130112213559) do
     t.text     "details"
     t.datetime "created_at",        :null => false
     t.datetime "updated_at",        :null => false
+    t.string   "gender"
+    t.string   "language"
+    t.integer  "year"
+    t.integer  "hours"
   end
 
 end

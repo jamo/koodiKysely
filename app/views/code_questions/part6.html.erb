@@ -1,4 +1,5 @@
-<h2>A</h2>
+<h1>Kysymys 6/8</h1>
+<h3>Koodi A</h3>
 
 <pre  class="sh_java">
 ArrayList&lt;Integer&gt; luvut = new ArrayList&lt;Integer&gt;();
@@ -24,7 +25,7 @@ for (int luku : luvut) {
 
 </pre>    
 
-<h2>B</h2> 
+<h3>Koodi B</h3> 
 <pre  class="sh_java">
 ArrayList&lt;Integer&gt; luvut = new ArrayList&lt;Integer&gt;();
 lisaa(luvut, 4, 3, 2);
@@ -43,15 +44,15 @@ tulosta(luvut);
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
-  <%= f.label :everything_in_main ,"A" %>
-  <%= f.radio_button :everything_in_main, 1 %>
-  <%= f.label :everything_in_main ,"B" %>
-  <%= f.radio_button :everything_in_main, 2 %>
-  <%= f.label :everything_in_main , "EOS" %>
+  <%= f.label :everything_in_main ,"Mielestäni parempi on koodi A" %>
+  <%= f.radio_button :everything_in_main, 1 %><br>
+  <%= f.label :everything_in_main ,"Mielestäni parempi on koodi B" %>
+  <%= f.radio_button :everything_in_main, 2 %><br>
+  <%= f.label :everything_in_main , "En osaa sanoa" %>
   <%= f.radio_button :everything_in_main, 3 %> <br>
-  <%= f.text_area :everything_in_main_comment %>
+  <%= f.text_area :everything_in_main_comment, :size=>'15x4' %>
   <br>
 
-  <%= f.submit "Seuraava" %>
+  <%= f.submit "Seuraava", :class=>'btn btn-primary' %>
 
  <% end %>

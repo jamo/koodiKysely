@@ -1,18 +1,22 @@
-%h1 New answer
+%h1 Taustatiedot
 
 = form_for @student do |f|
-  = f.label :student_number
+  = f.label "Opiskelijanumero tai TMC tunnus"
+  %br
   = f.text_field :student_number 
   %br
-
-  = f.label :programmed_before
+  = f.label "Oletko ohjelmoinut aiemmin?"
   = f.check_box :programmed_before 
   %br
-
-  = f.label :details
+  = f.label "jos ruksitit edellisen:"
   %br
-  = f.text_area :details 
-
+  = f.label "kerro millä ohjelmointikielillä:" 
   %br
-  = f.submit 'Next'
+  = f.text_area :language, :size => '15x1'
+  %br
+  = f.label "kuinka monta tuntia olet käyttänyä (arviolta) ohjelmointiin:"
+  %br
+  = f.number_field :hours 
+  %br
+  = f.submit 'Next', class: 'btn btn-primary btn-large'
 

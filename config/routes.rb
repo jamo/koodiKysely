@@ -1,7 +1,10 @@
 KoodiKysely::Application.routes.draw do
 
+  resources :pages
+
   resources :students
   resources :code_questions
+  root :to => 'pages#index' 
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

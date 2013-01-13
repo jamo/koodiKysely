@@ -1,4 +1,6 @@
-<h2>A</h2>
+<h1>Kysymys 1/8</h1>
+
+<h3>Koodi A</h3>
 
 <pre class="sh_java">
 Scanner lukija = new Scanner(System.in);
@@ -13,7 +15,7 @@ if( ika > 0 ) {
 }
 </pre>    
 
-<h2>B</h2> 
+<h3>Koodi B</h3> 
 <pre  class="sh_java">
 Scanner lukija = new Scanner(System.in);
 
@@ -31,15 +33,14 @@ System.out.println("Huijaat!");
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
-  <%= f.label :no_indent ,"A" %>
-  <%= f.radio_button :no_indent, 1 %>
-  <%= f.label :no_indent ,"B" %>
-  <%= f.radio_button :no_indent, 2 %>
-  <%= f.label :no_indent , "EOS" %>
-  <%= f.radio_button :no_indent, 3 %> <br>
-  <%= f.text_area :no_indent_comment %>
+  <%= f.label :no_indent ,"Mielestäni parempi on koodi A" %>  <%= f.radio_button :no_indent, 1 %> <br> 
+  <%= f.label :no_indent ,"Mielestäni parempi on koodi B" %>  <%= f.radio_button :no_indent, 2 %> 
+  <br>
+  <%= f.label :no_indent , "En osaa sanoa" %> <%= f.radio_button :no_indent, 3 %> <br>
+  <br>
+  <%= f.text_area :no_indent_comment, :size => '15x4' %>
   <br>
 
-  <%= f.submit "Seuraava" %>
+  <%= f.submit "Seuraava", :class=>"btn btn-primary"%>
 
  <% end %>

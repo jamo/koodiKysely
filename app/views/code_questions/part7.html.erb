@@ -1,4 +1,5 @@
-<h2>A</h2>
+<h1>Kysymys 4/8</h1>
+<h3>Koodi A</h3>
 
 <pre class="sh_java">
 Tiedosto tiedosto = new Tiedosto(“paivakirja.txt”); 
@@ -8,7 +9,7 @@ tiedosto.lopeta();
 
 System.out.println(tiedot);</pre>    
 
-<h2>B</h2> 
+<h3>Koodi B</h3> 
 <pre  class="sh_java">
 Tiedosto tiedosto = new Tiedosto(“paivakirja.txt”); 
 tiedosto.avaa();
@@ -22,15 +23,15 @@ System.out.println(tiedot);
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
-  <%= f.label :unconsistent_names ,"A" %>
-  <%= f.radio_button :unconsistent_names, 1 %>
-  <%= f.label :unconsistent_names ,"B" %>
-  <%= f.radio_button :unconsistent_names, 2 %>
-  <%= f.label :unconsistent_names , "EOS" %>
+  <%= f.label :unconsistent_names ,"Mielestäni parempi on koodi A" %>
+  <%= f.radio_button :unconsistent_names, 1 %><br>
+  <%= f.label :unconsistent_names ,"Mielestäni parempi on koodi B" %>
+  <%= f.radio_button :unconsistent_names, 2 %><br>
+  <%= f.label :unconsistent_names , "En osaa sanoa" %>
   <%= f.radio_button :unconsistent_names, 3 %> <br>
-  <%= f.text_area :unconsistent_names_comment %>
+  <%= f.text_area :unconsistent_names_comment, :size=>'15x4' %>
   <br>
 
-  <%= f.submit "Tallenna" %>
+  <%= f.submit "Tallenna", :class=>'btn btn-primary' %>
 
  <% end %>

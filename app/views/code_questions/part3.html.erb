@@ -1,4 +1,5 @@
-<h2>A</h2>
+<h1>Kysymys 3/8</h1>
+<h3>Koodi A</h3>
 
 <pre class="sh_java">
 while ( true ) {
@@ -13,7 +14,7 @@ System.out.println("kiitos ja kuulemiin.");
 
 </pre>    
 
-<h2>B</h2> 
+<h3>Koodi B</h3> 
 <pre class="sh_java">
 while ( true ) {
    System.out.println("osaan ohjelmoida!");
@@ -31,15 +32,16 @@ System.out.println("kiitos ja kuulemiin.");
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
-  <%= f.label :no_air ,"A" %>
-  <%= f.radio_button :no_air, 1 %>
-  <%= f.label :no_air ,"B" %>
-  <%= f.radio_button :no_air, 2 %>
-  <%= f.label :no_air , "EOS" %>
+  <%= f.label :no_air ,"Mielestäni parempi on koodi A" %>
+  <%= f.radio_button :no_air, 1 %><br>
+  <%= f.label :no_air ,"Mielestäni parempi on koodi B" %>
+  <%= f.radio_button :no_air, 2 %><br>
+  <%= f.label :no_air , "En osaa sanoa" %>
   <%= f.radio_button :no_air, 3 %> <br>
-  <%= f.text_area :no_air_comment %>
+  <br>
+  <%= f.text_area :no_air_comment, :size => '15x4' %>
   <br>
 
-  <%= f.submit "Seuraava" %>
+  <%= f.submit "Seuraava", :class => 'btn btn-primary' %>
 
  <% end %>
