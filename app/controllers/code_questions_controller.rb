@@ -1,7 +1,7 @@
 class CodeQuestionsController < ApplicationController
   include Wicked::Wizard
 
-  steps :part1, :part2, :part3, :part4, :part5, :part6, :part7, :part8
+  steps :part1, :part2, :part3, :part4, :part5, :part6, :part7, :part8, :success
 
 
   def show
@@ -16,7 +16,7 @@ class CodeQuestionsController < ApplicationController
   def update
     @student = Student.find_by_id(session[:student_id])
     @code_question = CodeQuestion.find_by_id(session[:code_question_id])
-    @code_question.update_attributes(params[:code_question])
+    @code_question.update_attributes(params[:code_question]) 
     
     render_wizard @code_question
   end

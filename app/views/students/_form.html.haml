@@ -1,8 +1,8 @@
 %h1 Taustatiedot
 
 = form_for @student do |f|
-  = f.label "Opiskelijanumero tai TMC tunnus"
-  %br
+  %p Opiskelijanumero tai TMC tunnus
+  
   = f.text_field :student_number 
   %br
   = f.label "Oletko ohjelmoinut aiemmin?"
