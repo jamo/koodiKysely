@@ -1,6 +1,10 @@
 class StudentsController < ApplicationController
   def new
     @student = Student.new
+    @kiitos = "Kiitos kyselyyn vastaamisesta" if session[:auth]
+    session[:user_id] = nil
+    session[:code_question_id] = nil
+    session[:auth] = nil
   end
 
   def create
