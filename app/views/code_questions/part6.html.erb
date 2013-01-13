@@ -43,13 +43,19 @@ tulosta(luvut);
 
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
-  
-  <%= f.label :everything_in_main ,"Mielestäni parempi on koodi A" %>
-  <%= f.radio_button :everything_in_main, 1 %><br>
-  <%= f.label :everything_in_main ,"Mielestäni parempi on koodi B" %>
-  <%= f.radio_button :everything_in_main, 2 %><br>
+  <p>Mielestäni...</p>
+  <%= f.radio_button :everything_in_main, 1 %>
+  <%= f.label :everything_in_main ,"Koodi A on parempi" %>
+  <br>
+  <%= f.radio_button :everything_in_main, 2 %>
+  <%= f.label :everything_in_main ,"Koodi B on parempi"  %>
+  <br>
+  <%= f.radio_button :everything_in_main, 3 %> 
   <%= f.label :everything_in_main , "En osaa sanoa" %>
-  <%= f.radio_button :everything_in_main, 3 %> <br>
+  <br>
+  <br>
+  <%= f.label "Vapaamuotoinen perustelu:" %>  
+  <br>
   <%= f.text_area :everything_in_main_comment, :size=>'15x4' %>
   <br>
 

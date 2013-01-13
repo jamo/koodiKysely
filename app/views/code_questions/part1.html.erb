@@ -32,11 +32,15 @@ System.out.println("Huijaat!");
 
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  <p>Mielestäni...</p>
   
-  <%= f.label :no_indent ,"Mielestäni parempi on koodi A" %>  <%= f.radio_button :no_indent, 1 %> <br> 
-  <%= f.label :no_indent ,"Mielestäni parempi on koodi B" %>  <%= f.radio_button :no_indent, 2 %> 
+  <%= f.radio_button :no_indent, 1 %> <%= f.label :no_indent ,"Koodi A on parempi" %>  <br> 
+  <%= f.radio_button :no_indent, 2 %> <%= f.label :no_indent ,"Koodi B on parempi" %>  
   <br>
-  <%= f.label :no_indent , "En osaa sanoa" %> <%= f.radio_button :no_indent, 3 %> <br>
+  <%= f.radio_button :no_indent, 3 %> <%= f.label :no_indent , "En osaa sanoa" %><br>
+  <br>
+  <br>
+  <%= f.label "Vapaamuotoinen perustelu:" %>
   <br>
   <%= f.text_area :no_indent_comment, :size => '15x4' %>
   <br>

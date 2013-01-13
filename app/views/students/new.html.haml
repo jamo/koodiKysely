@@ -1,22 +1,10 @@
-%h1 Taustatiedot
+-if @kiitos
+  %div{:class => "alert alert-success" }
+    %a.close{"data-dismiss" => "alert"} ×
+    = content_tag :div, @kiitos, :id => "flash_success"
 
-= form_for @student do |f|
-  = f.label "Opiskelijanumero tai TMC tunnus"
-  %br
-  = f.text_field :student_number 
-  %br
-  = f.label "Oletko ohjelmoinut aiemmin?"
-  = f.check_box :programmed_before 
-  %br
-  = f.label "jos ruksitit edellisen:"
-  %br
-  = f.label "kerro millä ohjelmointikielillä:" 
-  %br
-  = f.text_area :language, :size => '15x1'
-  %br
-  = f.label "kuinka monta tuntia olet käyttänyä (arviolta) ohjelmointiin:"
-  %br
-  = f.number_field :hours 
-  %br
-  = f.submit 'Next', class: 'btn btn-primary btn-large'
 
+%p.center.lead Tässä kyselyssä tutkimme, minkälaista ohjelmakoodia aloittelevat ohjelmoijat pitävät hyvänä. Vastaa kysymyksiin oman tuntemuksesi pohjalta, sinun ei tarvitse ymmärtää ohjelmaa tai ohjelmakoodia. Voit aina myös antaa vapaamuotoisen perustelun vastauksellesi.
+
+%div.container
+= render(:partial => "form")

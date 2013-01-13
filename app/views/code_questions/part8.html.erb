@@ -45,12 +45,19 @@ System.out.println("Vuosi on karkausvuosi!");
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
-  <%= f.label :too_complex_iffs ,"Mielestäni parempi on koodi A" %>
-  <%= f.radio_button :too_complex_iffs, 1 %><br>
-  <%= f.label :too_complex_iffs ,"Mielestäni parempi on koodi B" %>
-  <%= f.radio_button :too_complex_iffs, 2 %><br>
+  <p>Mielestäni...</p>
+  <%= f.radio_button :too_complex_iffs, 1 %>
+  <%= f.label :too_complex_iffs ,"Koodi A on parempi" %>
+  <br>
+  <%= f.radio_button :too_complex_iffs, 2 %>
+  <%= f.label :too_complex_iffs ,"Koodi B on parempi" %>
+  <br>
+  <%= f.radio_button :too_complex_iffs, 3 %>
   <%= f.label :too_complex_iffs , "En osaa sanoa" %>
-  <%= f.radio_button :too_complex_iffs, 3 %> <br>
+   <br>
+  <br>
+  <%= f.label "Vapaamuotoinen perustelu:" %>
+  <br>
   <%= f.text_area :too_complex_iffs_comment, :size=>'15x4' %>
   <br>
 

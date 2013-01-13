@@ -1,0 +1,28 @@
+%h1 Taustatiedot
+
+= form_for @student do |f|
+  = f.label "Opiskelijanumero tai TMC tunnus"
+  %br
+  = f.text_field :student_number 
+  %br
+  = f.label "Oletko ohjelmoinut aiemmin?"
+  %br
+  
+  = f.radio_button :programmed_before, true
+  = f.label "Kyllä"
+  %br
+  = f.radio_button :programmed_before, false
+  = f.label "En"
+
+  %br
+  %br
+  = f.label "Jos vastasit kyllä, kerro millä ohjelmointikielillä:" 
+  %br
+  = f.text_area :language, :size => '15x4'
+  %br
+  = f.label "Jos vastasit kyllä, kuinka monta tuntia olet käyttänyt (arviolta) ohjelmointiin:"
+  %br
+  = f.number_field :hours 
+  %br
+  = f.submit 'Aloita kysely', class: 'btn btn-primary btn-large'
+

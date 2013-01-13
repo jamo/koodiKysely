@@ -31,13 +31,18 @@ System.out.println("kiitos ja kuulemiin.");
 
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
-  
-  <%= f.label :no_air ,"Mielestäni parempi on koodi A" %>
-  <%= f.radio_button :no_air, 1 %><br>
-  <%= f.label :no_air ,"Mielestäni parempi on koodi B" %>
-  <%= f.radio_button :no_air, 2 %><br>
+  <p>Mielestäni...</p>
+  <%= f.radio_button :no_air, 1 %>
+  <%= f.label :no_air ,"Koodi A on perempi" %>
+  <br>
+  <%= f.radio_button :no_air, 2 %>
+  <%= f.label :no_air ,"Koodi B on parempi" %>
+  <br>
+  <%= f.radio_button :no_air, 3 %>
   <%= f.label :no_air , "En osaa sanoa" %>
-  <%= f.radio_button :no_air, 3 %> <br>
+   <br>
+   <br>
+   <%= f.label "Vapaamuotoinen perustelu:" %>
   <br>
   <%= f.text_area :no_air_comment, :size => '15x4' %>
   <br>
