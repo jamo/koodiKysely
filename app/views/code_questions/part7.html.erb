@@ -23,13 +23,13 @@ System.out.println(tiedot);
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   <p>Mielestäni...</p>
-  <%= f.radio_button :unconsistent_names, 1 %>
+  <%= f.radio_button :unconsistent_names, "A" %>
   <%= f.label :unconsistent_names ,"Koodi A on parempi" %>
   <br>
-  <%= f.radio_button :unconsistent_names, 2 %>
+  <%= f.radio_button :unconsistent_names, "B" %>
   <%= f.label :unconsistent_names ,"Koodi B on parempi" %>
   <br>
-  <%= f.radio_button :unconsistent_names, 3 %>
+  <%= f.radio_button :unconsistent_names, "EOS" %>
   <%= f.label :unconsistent_names , "En osaa sanoa" %>
    <br>
   <br>
@@ -38,6 +38,6 @@ System.out.println(tiedot);
   <%= f.text_area :unconsistent_names_comment, :size=>'15x4' %>
   <br>
 
-  <%= f.submit "Tallenna", :class=>'btn btn-primary' %>
+  <%= f.submit "Seuraava", :class=>'btn btn-primary' %>
 
  <% end %>

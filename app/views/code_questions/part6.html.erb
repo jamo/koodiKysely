@@ -43,13 +43,13 @@ tulosta(luvut);
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   <p>Mielestäni...</p>
-  <%= f.radio_button :everything_in_main, 1 %>
+  <%= f.radio_button :everything_in_main, "A" %>
   <%= f.label :everything_in_main ,"Koodi A on parempi" %>
   <br>
-  <%= f.radio_button :everything_in_main, 2 %>
+  <%= f.radio_button :everything_in_main, "B" %>
   <%= f.label :everything_in_main ,"Koodi B on parempi"  %>
   <br>
-  <%= f.radio_button :everything_in_main, 3 %> 
+  <%= f.radio_button :everything_in_main, "EOS" %> 
   <%= f.label :everything_in_main , "En osaa sanoa" %>
   <br>
   <br>

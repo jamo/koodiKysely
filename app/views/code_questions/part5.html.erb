@@ -23,13 +23,13 @@ pekka.kerroOlo();
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   
   <p>Mielestäni...</p>
-  <%= f.radio_button :bad_method_names, 1 %>
+  <%= f.radio_button :bad_method_names, "A" %>
   <%= f.label :bad_method_names ,"Koodi A on parempi" %>
   <br>
-  <%= f.radio_button :bad_method_names, 2 %>
+  <%= f.radio_button :bad_method_names, "B" %>
   <%= f.label :bad_method_names ,"Koodi B on parempi" %>
   <br>
-  <%= f.radio_button :bad_method_names, 3 %>
+  <%= f.radio_button :bad_method_names, "EOS" %>
   <%= f.label :bad_method_names , "En osaa sanoa" %>
   <br>
   <br>

@@ -33,13 +33,13 @@ System.out.println("kiitos ja kuulemiin.");
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   <p>Mielestäni...</p>
-  <%= f.radio_button :no_air, 1 %>
+  <%= f.radio_button :no_air, "A" %>
   <%= f.label :no_air ,"Koodi A on perempi" %>
   <br>
-  <%= f.radio_button :no_air, 2 %>
+  <%= f.radio_button :no_air, "B" %>
   <%= f.label :no_air ,"Koodi B on parempi" %>
   <br>
-  <%= f.radio_button :no_air, 3 %>
+  <%= f.radio_button :no_air, "EOS" %>
   <%= f.label :no_air , "En osaa sanoa" %>
    <br>
    <br>

@@ -22,13 +22,13 @@ System.out.println(“Pinta-ala: “ + pintaAla); // tulostetaan pinta-ala
 
 <%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
   <p>Mielestäni...</p>
-  <%= f.radio_button :extra_comments, 1 %>
+  <%= f.radio_button :extra_comments, "A" %>
   <%= f.label :extra_comments ,"Koodi A on parempi" %>
   <br>
-  <%= f.radio_button :extra_comments, 2 %>
+  <%= f.radio_button :extra_comments, "B" %>
   <%= f.label :extra_comments ,"Koodi B on parempi" %>
   <br>
-  <%= f.radio_button :extra_comments, 3 %> 
+  <%= f.radio_button :extra_comments, "EOS" %> 
   <%= f.label :extra_comments , "En osaa sanoa" %>
   <br>
   <br>
