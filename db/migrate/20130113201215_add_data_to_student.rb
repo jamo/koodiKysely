@@ -3,7 +3,7 @@ class AddDataToStudent < ActiveRecord::Migration
     add_column :students, :gender, :string
     add_column :students, :language, :string
     add_column :students, :year, :integer
-    add_column :students, :hours, :integer
+    add_column :students, :hours, :integer, :default => -1
   end
 
   def down

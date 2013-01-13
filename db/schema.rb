@@ -39,12 +39,12 @@ ActiveRecord::Schema.define(:version => 20130113201215) do
     t.string   "student_number"
     t.boolean  "programmed_before"
     t.text     "details"
-    t.datetime "created_at",        :null => false
-    t.datetime "updated_at",        :null => false
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
     t.string   "gender"
     t.string   "language"
     t.integer  "year"
-    t.integer  "hours"
+    t.integer  "hours",             :default => -1
   end
 
 end
