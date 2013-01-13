@@ -1,0 +1,35 @@
+<h2>A</h2>
+
+<pre class="sh_java">
+int leveys = 2;
+int korkeus = 4;
+int pintaAla = leveys * korkeus;
+
+System.out.println(“Pinta-ala: “ + pintaAla);
+</pre>    
+
+<h2>B</h2> 
+<pre class="sh_java">
+int leveys = 2; // leveys on 2
+int korkeus = 4; // korkeus on 4
+int pintaAla = leveys * korkeus; // pinta-ala on leveys * korkeus
+
+System.out.println(“Pinta-ala: “ + pintaAla); // tulostetaan pinta-ala
+</pre>
+
+
+
+<%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  
+  <%= f.label :extra_comments ,"A" %>
+  <%= f.radio_button :extra_comments, 1 %>
+  <%= f.label :extra_comments ,"B" %>
+  <%= f.radio_button :extra_comments, 2 %>
+  <%= f.label :extra_comments , "EOS" %>
+  <%= f.radio_button :extra_comments, 3 %> <br>
+  <%= f.text_area :extra_comments_comment %>
+  <br>
+
+  <%= f.submit "Seuraava" %>
+
+ <% end %>

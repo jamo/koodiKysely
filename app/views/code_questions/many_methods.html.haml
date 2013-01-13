@@ -1,0 +1,10 @@
+%h1 Väärin sisennetty koodi
+
+
+= form_for @code_question, :url => wizard_path, :method => :put do |f| 
+  = f.label :many_methods ,"A"
+  = f.radio_button :many_methods, true
+  = f.label :many_methods ,"B"
+  = f.radio_button :many_methods, false
+  = f.submit "Next" 
+end 

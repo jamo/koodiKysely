@@ -1,8 +1,8 @@
 KoodiKysely::Application.routes.draw do
 
-  resources :studentsdo do
-    resources :code_questions
-  end
+  resources :students
+  resources :code_questions
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -13,34 +13,23 @@
 
 ActiveRecord::Schema.define(:version => 20130112213559) do
 
-  create_table "code_question", :force => true do |t|
-    t.boolean  "no_indent_a"
-    t.boolean  "no_indent_b"
+  create_table "code_questions", :force => true do |t|
+    t.string   "no_indent"
     t.text     "no_indent_comment"
-    t.boolean  "bad_variable_names_a"
-    t.boolean  "bad_variable_names_b"
+    t.string   "bad_variable_names"
     t.text     "bad_variable_names_comment"
-    t.boolean  "no_air_a"
-    t.boolean  "no_air_b"
+    t.string   "no_air"
     t.text     "no_air_comment"
-    t.boolean  "extra_comments_a"
-    t.boolean  "extra_comments_b"
+    t.string   "extra_comments"
     t.text     "extra_comments_comment"
-    t.boolean  "bad_method_names_a"
-    t.boolean  "bad_method_names_b"
+    t.string   "bad_method_names"
     t.text     "bad_method_names_comment"
-    t.boolean  "everything_in_main_a"
-    t.boolean  "everything_in_main_b"
+    t.string   "everything_in_main"
     t.text     "everything_in_main_comment"
-    t.boolean  "too_complex_iffs_a"
-    t.boolean  "too_complex_iffs_b"
+    t.string   "too_complex_iffs"
     t.text     "too_complex_iffs_comment"
-    t.boolean  "unconsistent_names_a"
-    t.boolean  "unconsistent_names_b"
+    t.string   "unconsistent_names"
     t.text     "unconsistent_names_comment"
-    t.boolean  "many_methods_a"
-    t.boolean  "many_methods_b"
-    t.text     "many_methods_comment"
     t.integer  "student_id"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false

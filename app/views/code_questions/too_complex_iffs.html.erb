@@ -1,0 +1,36 @@
+<h2>A</h2>
+
+<pre class="sh_java">
+Tiedosto tiedosto = new Tiedosto(“paivakirja.txt”); 
+tiedosto.avaa();
+String tiedot = tiedosto.lue();
+tiedosto.lopeta();
+
+System.out.println(tiedot);</pre>    
+
+<h2>B</h2> 
+<pre  class="sh_java">
+Tiedosto tiedosto = new Tiedosto(“paivakirja.txt”); 
+tiedosto.avaa();
+String tiedot = tiedosto.lue();
+tiedosto.sulje();
+
+System.out.println(tiedot);
+</pre>
+
+
+
+<%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  
+  <%= f.label :unconsistent_names ,"A" %>
+  <%= f.radio_button :unconsistent_names, 1 %>
+  <%= f.label :unconsistent_names ,"B" %>
+  <%= f.radio_button :unconsistent_names, 2 %>
+  <%= f.label :unconsistent_names , "EOS" %>
+  <%= f.radio_button :unconsistent_names, 3 %> <br>
+  <%= f.text_area :unconsistent_names_comment %>
+  <br>
+
+  <%= f.submit "Tallenna" %>
+
+ <% end %>

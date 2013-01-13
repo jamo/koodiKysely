@@ -1,0 +1,58 @@
+<h2>A</h2>
+
+<pre class="sh_java">
+int vuosi = 2013;
+        
+if ( vuosi % 400 == 0 ) {
+    System.out.println("Vuosi on karkausvuosi!");
+} else {
+    if ( vuosi % 100 == 0 ) {
+        System.out.println("Vuosi ei ole karkausvuosi!");
+    } else {
+        if ( vuosi % 4 == 0 ) {
+            System.out.println("Vuosi on karkausvuosi!");
+        } else {
+            System.out.println("Vuosi ei ole karkausvuosi!");
+        }
+    }
+}
+</pre>    
+
+<h2>B</h2> 
+<pre  class="sh_java">
+int vuosi = 2013;
+
+if ( vuosi % 4 != 0 ) {
+    System.out.println("Vuosi ei ole karkausvuosi!");
+    return;
+}
+
+if ( vuosi % 400 == 0 ) {
+    System.out.println("Vuosi on karkausvuosi!");
+    return;
+}
+
+if ( vuosi % 100 == 0 ) {
+    System.out.println("Vuosi ei ole karkausvuosi!");
+    return;
+}
+
+System.out.println("Vuosi on karkausvuosi!");
+</pre>
+
+
+
+<%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  
+  <%= f.label :too_complex_iffs ,"A" %>
+  <%= f.radio_button :too_complex_iffs, 1 %>
+  <%= f.label :too_complex_iffs ,"B" %>
+  <%= f.radio_button :too_complex_iffs, 2 %>
+  <%= f.label :too_complex_iffs , "EOS" %>
+  <%= f.radio_button :too_complex_iffs, 3 %> <br>
+  <%= f.text_area :too_complex_iffs_comment %>
+  <br>
+
+  <%= f.submit "Seuraava" %>
+
+ <% end %>

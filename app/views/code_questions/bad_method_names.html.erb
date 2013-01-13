@@ -1,0 +1,35 @@
+<h2>A</h2>
+
+<pre class="sh_java">
+Henkilo pekka = new Henkilo();
+pekka.jumppaa();
+pekka.zzz();
+pekka.panttaa();
+pekka.print();
+</pre>    
+
+<h2>B</h2> 
+<pre class="sh_java">
+Henkilo pekka = new Henkilo();
+pekka.liiku();
+pekka.nuku();
+pekka.opiskele();
+pekka.kerroOlo();
+</pre>
+
+
+
+<%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  
+  <%= f.label :bad_method_names ,"A" %>
+  <%= f.radio_button :bad_method_names, 1 %>
+  <%= f.label :bad_method_names ,"B" %>
+  <%= f.radio_button :bad_method_names, 2 %>
+  <%= f.label :bad_method_names , "EOS" %>
+  <%= f.radio_button :bad_method_names, 3 %> <br>
+  <%= f.text_area :bad_method_names_comment %>
+  <br>
+
+  <%= f.submit "Seuraava" %>
+
+ <% end %>

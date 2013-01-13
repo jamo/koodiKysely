@@ -1,0 +1,38 @@
+<h2>A</h2>
+
+<pre  class="sh_java">
+Scanner l = new Scanner(System.in);
+
+System.out.print("Kenelle sanotaan hei: ");
+String x = l.nextLine();
+
+System.out.print("Hei " + x);
+
+</pre>    
+
+<h2>B</h2> 
+<pre class="sh_java">
+  Scanner lukija = new Scanner(System.in);
+
+  System.out.print("Kenelle sanotaan hei: ");
+  String nimi = lukija.nextLine();
+
+  System.out.print("Hei " + nimi);
+</pre>
+
+
+
+<%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  
+  <%= f.label :bad_variable_names ,"A" %>
+  <%= f.radio_button :bad_variable_names, 1 %>
+  <%= f.label :bad_variable_names ,"B" %>
+  <%= f.radio_button :bad_variable_names, 2 %>
+  <%= f.label :bad_variable_names , "EOS" %>
+  <%= f.radio_button :bad_variable_names, 3 %> <br>
+  <%= f.text_area :bad_variable_names_comment %>
+  <br>
+
+  <%= f.submit "Seuraava" %>
+
+ <% end %>

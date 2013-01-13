@@ -1,0 +1,57 @@
+<h2>A</h2>
+
+<pre  class="sh_java">
+ArrayList&lt;Integer&gt; luvut = new ArrayList&lt;Integer&gt;();
+luvut.add(4);
+luvut.add(3);
+luvut.add(3);
+
+System.out.println("luvut alussa:");
+for (int luku : luvut) {
+    System.out.println(luku);
+}
+
+
+while (luvut.contains(Integer.valueOf(3))) {
+    luvut.remove(Integer.valueOf(3));         
+}
+
+System.out.println("luvut poiston jälkeen:");
+
+for (int luku : luvut) {
+    System.out.println(luku);
+}
+
+</pre>    
+
+<h2>B</h2> 
+<pre  class="sh_java">
+ArrayList&lt;Integer&gt; luvut = new ArrayList&lt;Integer&gt;();
+lisaa(luvut, 4, 3, 2);
+
+System.out.println("luvut alussa:");
+tulosta(luvut);
+
+poista(luvut, 3);
+
+System.out.println("luvut poiston jälkeen:");
+tulosta(luvut);
+
+</pre>
+
+
+
+<%= form_for @code_question, :url => wizard_path, :method => :put do |f| %>
+  
+  <%= f.label :everything_in_main ,"A" %>
+  <%= f.radio_button :everything_in_main, 1 %>
+  <%= f.label :everything_in_main ,"B" %>
+  <%= f.radio_button :everything_in_main, 2 %>
+  <%= f.label :everything_in_main , "EOS" %>
+  <%= f.radio_button :everything_in_main, 3 %> <br>
+  <%= f.text_area :everything_in_main_comment %>
+  <br>
+
+  <%= f.submit "Seuraava" %>
+
+ <% end %>
