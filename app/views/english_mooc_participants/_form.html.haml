@@ -20,10 +20,21 @@
   %span Other/I don't want to tell
   %br
   %br
-  
+
+
+  = f.label "Nationality:"
+  %br
+  = f.text_field :nationality
+  %br
+  = f.label "Native language:"
+  %br
+  = f.text_field :native_language
+  %br
+  %br
+
   = f.label "Do you have any programming experience?"
   %br
-  
+
   = f.radio_button :programmed_before, true
   = f.label "Yes"
   %br

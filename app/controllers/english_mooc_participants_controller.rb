@@ -11,6 +11,9 @@ class EnglishMoocParticipantsController < ApplicationController
   def create
     @title = "mooc.fi Survey"
     @student = EnglishMoocParticipant.create(params[:english_mooc_participant])
+    @student.request = request.inspect
+    @student.ip = request.ip
+    @student.save!
     #session[:student_id] = @student.id
     @code_question = @student.english_moocs << EnglishMooc.create
     #session[:english_mooc_id] = @code_question.id
