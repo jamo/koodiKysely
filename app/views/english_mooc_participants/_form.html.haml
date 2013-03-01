@@ -1,0 +1,44 @@
+%h1 Background
+
+= form_for @student do |f|
+  %p TMC account:
+  = f.text_field :student_number 
+  %br
+  = f.label "Year of birth:"
+  %br
+  = f.text_field :year
+  %br
+  = f.label "Gender:"
+  %br
+  = f.radio_button :gender, 'M' 
+  = f.label "Male"
+  %br
+  = f.radio_button :gender, 'N'
+  = f.label "female" 
+  %br
+  = f.radio_button :gender, 'O'
+  = f.label "Other/I don't want to tell"
+  %br
+  %br
+  
+  = f.label "Do you have any programming experience?"
+  %br
+  
+  = f.radio_button :programmed_before, true
+  = f.label "Yes"
+  %br
+  = f.radio_button :programmed_before, false
+  = f.label "No"
+
+  %br
+  %br
+  = f.label "If yes, which programming languages" 
+  %br
+  = f.text_area :language, :size => '15x4'
+  %br
+  = f.label "If yes, how many hours approximately:"
+  %br
+  = f.number_field :hours 
+  %br
+  = f.submit 'Next page', class: 'btn btn-primary btn-large'
+

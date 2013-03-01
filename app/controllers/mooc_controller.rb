@@ -1,0 +1,2 @@
+class MoocController < ApplicationController
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130113201215) do
+ActiveRecord::Schema.define(:version => 20130301181304) do
 
   create_table "code_questions", :force => true do |t|
     t.string   "no_indent"
@@ -33,6 +33,34 @@ ActiveRecord::Schema.define(:version => 20130113201215) do
     t.integer  "student_id"
     t.datetime "created_at",                 :null => false
     t.datetime "updated_at",                 :null => false
+  end
+
+  create_table "english_mooc_participants", :force => true do |t|
+    t.string   "student_number"
+    t.boolean  "programmed_before"
+    t.text     "details"
+    t.string   "gender"
+    t.string   "language"
+    t.string   "year"
+    t.integer  "hours",             :default => -1
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
+  end
+
+  create_table "english_moocs", :force => true do |t|
+    t.string   "yksi"
+    t.string   "kaksi"
+    t.string   "kolme"
+    t.string   "nelja"
+    t.string   "viisi"
+    t.string   "kuusi"
+    t.string   "seitseman"
+    t.string   "kahdeksan"
+    t.string   "yhdekan"
+    t.string   "kymmenen"
+    t.integer  "english_mooc_participant_id"
+    t.datetime "created_at",                  :null => false
+    t.datetime "updated_at",                  :null => false
   end
 
   create_table "students", :force => true do |t|

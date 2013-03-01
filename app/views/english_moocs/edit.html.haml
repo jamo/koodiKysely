@@ -1,0 +1,148 @@
+%legend We are asking a bit about your personality for our universities research. Please take the time to answer. It should take less tha 5 minutes.
+= form_for @mooc_answer, :method => :put do |f|
+  %table.table.table-striped.table-hover
+    %thead
+      %tr
+        %th I see myself as:
+        %th Disagree strongly
+        %th Disagree moderately
+        %th Disagree little
+        %th Neither agree nor disagree
+        %th Agree a little
+        %th Agree moderately
+        %th Agree strongly
+        
+    %tbody
+      %tr
+        %td= f.label :yksi ,"Extraverted, enthusiastic"
+        %td= f.radio_button :yksi, "1"
+        %td= f.radio_button :yksi, "2"
+        %td= f.radio_button :yksi, "3"
+        %td= f.radio_button :yksi, "4"
+        %td= f.radio_button :yksi, "5"
+        %td= f.radio_button :yksi, "6"
+        %td= f.radio_button :yksi, "7"
+      %tr
+        %td= f.label :kaksi ,"Critical, quarrelsome"
+        %td= f.radio_button :kaksi, "1"
+        %td= f.radio_button :kaksi, "2"
+        %td= f.radio_button :kaksi, "3"
+        %td= f.radio_button :kaksi, "4"
+        %td= f.radio_button :kaksi, "5"
+        %td= f.radio_button :kaksi, "6"
+        %td= f.radio_button :kaksi, "7"
+      %tr
+        %td= f.label :kolme ,"Dependable, self-disciplined"
+        %td= f.radio_button :kolme, "1"
+        %td= f.radio_button :kolme, "2"
+        %td= f.radio_button :kolme, "3"
+        %td= f.radio_button :kolme, "4"
+        %td= f.radio_button :kolme, "5"
+        %td= f.radio_button :kolme, "6"
+        %td= f.radio_button :kolme, "7"
+      %tr
+        %td= f.label :nelja ,"Anxious, easily upset."
+        %td= f.radio_button :nelja, "1"
+        %td= f.radio_button :nelja, "2"
+        %td= f.radio_button :nelja, "3"
+        %td= f.radio_button :nelja, "4"
+        %td= f.radio_button :nelja, "5"
+        %td= f.radio_button :nelja, "6"
+        %td= f.radio_button :nelja, "7"
+      %tr
+        %td= f.label :viisi ,"Open to new experiences, complex."
+        %td= f.radio_button :viisi, "1"
+        %td= f.radio_button :viisi, "2"
+        %td= f.radio_button :viisi, "3"
+        %td= f.radio_button :viisi, "4"
+        %td= f.radio_button :viisi, "5"
+        %td= f.radio_button :viisi, "6"
+        %td= f.radio_button :viisi, "7"
+      %tr
+        %td= f.label :kuusi ,"Reserved, quiet."
+        %td= f.radio_button :kuusi, "1"
+        %td= f.radio_button :kuusi, "2"
+        %td= f.radio_button :kuusi, "3"
+        %td= f.radio_button :kuusi, "4"
+        %td= f.radio_button :kuusi, "5"
+        %td= f.radio_button :kuusi, "6"
+        %td= f.radio_button :kuusi, "7"
+      %tr
+        %td= f.label :seitseman ,"Sympathetic, warm."
+        %td= f.radio_button :seitseman, "1"
+        %td= f.radio_button :seitseman, "2"
+        %td= f.radio_button :seitseman, "3"
+        %td= f.radio_button :seitseman, "4"
+        %td= f.radio_button :seitseman, "5"
+        %td= f.radio_button :seitseman, "6"
+        %td= f.radio_button :seitseman, "7"
+      %tr
+        %td= f.label :kahdeksan ,"Disorganized, careless."
+        %td= f.radio_button :kahdeksan, "1"
+        %td= f.radio_button :kahdeksan, "2"
+        %td= f.radio_button :kahdeksan, "3"
+        %td= f.radio_button :kahdeksan, "4"
+        %td= f.radio_button :kahdeksan, "5"
+        %td= f.radio_button :kahdeksan, "6"
+        %td= f.radio_button :kahdeksan, "7"
+      %tr
+        %td= f.label :yhdekan ,"Calm, emotionally stable."
+        %td= f.radio_button :yhdekan, "1"
+        %td= f.radio_button :yhdekan, "2"
+        %td= f.radio_button :yhdekan, "3"
+        %td= f.radio_button :yhdekan, "4"
+        %td= f.radio_button :yhdekan, "5"
+        %td= f.radio_button :yhdekan, "6"
+        %td= f.radio_button :yhdekan, "7"
+      %tr
+        %td= f.label :kymmenen ,"Conventional, uncreative."
+        %td= f.radio_button :kymmenen, "1"
+        %td= f.radio_button :kymmenen, "2"
+        %td= f.radio_button :kymmenen, "3"
+        %td= f.radio_button :kymmenen, "4"
+        %td= f.radio_button :kymmenen, "5"
+        %td= f.radio_button :kymmenen, "6"
+        %td= f.radio_button :kymmenen, "7"
+  .form-actions
+    = f.submit 'Save', class: 'btn btn-primary'
+  -#%p TMC account:
+  -#= f.text_field :student_number 
+  -#%br
+  -#= f.label "Year of birth:"
+  -#%br
+  -#= f.text_field :year
+  -#%br
+  -#= f.label "Gender:"
+  -#%br
+  -#= f.radio_button :gender, 'M' 
+  -#= f.label "Male"
+  -#%br
+  -#= f.radio_button :gender, 'N'
+  -#= f.label "female" 
+  -#%br
+  -#= f.radio_button :gender, 'O'
+  -#= f.label "Other/I don't want to tell"
+  -#%br
+  -#%br
+  -#
+  -#= f.label "Do you have any programming experience?"
+  -#%br
+  -#
+  -#= f.radio_button :programmed_before, true
+  -#= f.label "Yes"
+  -#%br
+  -#= f.radio_button :programmed_before, false
+  -#= f.label "No"
+-#
+-# %br
+-# %br
+-# = f.label "If yes, which programming languages" 
+-# %br
+-# = f.text_area :language, :size => '15x4'
+-# %br
+-# = f.label "If yes, how many hours approximately:"
+-# %br
+-# = f.number_field :hours 
+-# %br
+  = f.submit 'Next page', class: 'btn btn-primary btn-large'
+

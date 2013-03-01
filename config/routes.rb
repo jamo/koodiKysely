@@ -1,5 +1,8 @@
 KoodiKysely::Application.routes.draw do
 
+  resources :english_mooc_participants
+  resources :english_moocs
+
   resources :pages
 
   resources :students

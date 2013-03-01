@@ -1,0 +1,10 @@
+-if @kiitos
+  %div{:class => "alert alert-success" }
+    %a.close{"data-dismiss" => "alert"} ×
+    = content_tag :div, @kiitos, :id => "flash_success"
+
+
+-#%p.center.lead 
+
+%div.container
+= render(:partial => "form")
