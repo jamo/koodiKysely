@@ -1,5 +1,6 @@
 class EnglishMoocParticipantsController < ApplicationController
  def new
+    @title = "mooc.fi Survey" 
     @student = EnglishMoocParticipant.new
     @kiitos = "Than you for taking our survey!" if session[:auth]
     session[:user_id] = nil
@@ -8,6 +9,7 @@ class EnglishMoocParticipantsController < ApplicationController
   end
 
   def create
+    @title = "mooc.fi Survey" 
     @student = EnglishMoocParticipant.create(params[:english_mooc_participant])
     #session[:student_id] = @student.id
     @code_question = @student.english_moocs << EnglishMooc.create
