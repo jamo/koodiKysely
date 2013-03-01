@@ -17,7 +17,7 @@
   = f.label "female" 
   %br
   = f.radio_button :gender, 'O'
-  = f.label "Other/I don't want to tell"
+  %span Other/I don't want to tell
   %br
   %br
   
@@ -32,9 +32,9 @@
 
   %br
   %br
-  = f.label "If yes, which programming languages" 
+  = f.label "If yes, which programming languages"
   %br
-  = f.text_area :language, :size => '15x4'
+  = f.text_area :language, :size => '20x4', class: 'input-xlarge'
   %br
   = f.label "If yes, how many hours approximately:"
   %br
