@@ -1,5 +1,7 @@
 KoodiKysely::Application.routes.draw do
 
+  get "code_question_review_controller/index"
+
   resources :english_mooc_participants
   resources :english_moocs
 

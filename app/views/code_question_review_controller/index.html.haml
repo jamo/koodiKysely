@@ -1,0 +1,16 @@
+.page-header
+%table.table.table-striped
+  %thead
+    %tr
+      - Student.attribute_names.each do |s|
+        %th= s
+      - CodeQuestion.attribute_names.each do |n|
+        %th= n
+  %tbody
+    - @student.each do |s|
+      %tr
+        - s.attributes.each do |attr|
+          %td= attr[1]
+        - if s.code_questions.first
+          - s.code_questions.first.attributes.each do |a|
+            %td= a[1]
